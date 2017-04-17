@@ -52,12 +52,12 @@ def wrap_star_digger(item, type_str, data_name='Value'):
             return item[data_name]
         else:
             for k in item:
-                sub_ret = json_digger(item[k], type_str)
+                sub_ret = wrap_star_digger(item[k], type_str, data_name)
                 if sub_ret:
                     ret.extend(sub_ret)
     elif type(item) == list:
         for i in item:
-            sub_ret = json_digger(i, type_str)
+            sub_ret = wrap_star_digger(i, type_str, data_name)
             if sub_ret:
                 ret.extend(sub_ret)
     return ret
