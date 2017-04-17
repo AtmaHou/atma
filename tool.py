@@ -4,12 +4,13 @@ def num_there(s):
     return any(i.isdigit() for i in s)
 
 
-def convert_to_word_lst(sentence):
+def convert_to_word_lst(sentence, lower=True):
     sentence = filter(lambda x: x in string.printable, sentence)
     exclude = '''!"#$%&\'()*+,:;<=>?@[\\]^_`{|}~-/\t''' + '\n'
     for e in exclude:
         sentence = sentence.replace(e, ' ')
-    # sentence = sentence.lower()
+    if lower:
+        sentence = sentence.lower()
     word_sq = sentence.split(' ')
     ret = []
     for ind, w in enumerate(word_sq):
