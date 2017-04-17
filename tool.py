@@ -36,19 +36,20 @@ def convert_to_word_lst(sentence, lower=True):
     return filter(lambda x: x.strip(), ret)
 
 
-def wrap_star_digger(item, type_str):
+def wrap_star_digger(item, type_str, data_name='Value'):
     """
     code used to extract data from Bing's wrap star
     :param item: wrap star obj
     :param type_str: target type string
+    :param data_name: target data label, might be "Entities", "Properties", 'Value'
     :return: list of all matched target, arranged in occurance
     """
     ret = []
     if type(item) == dict:
         if 'Type' in item and item['Type'] == type_str:  # 'Business.Consumer_Product.Description'
-            if len(item['Value']) > 1:
+            if len(item[data_name]) > 1:
                 print 'length error!!!!!!!!!!!'
-            return item['Value']
+            return item[data_name]
         else:
             for k in item:
                 sub_ret = json_digger(item[k], type_str)
