@@ -34,3 +34,29 @@ def convert_to_word_lst(sentence, lower=True):
         else:
             ret.append(w)
     return filter(lambda x: x.strip(), ret)
+
+
+def wrap_star_digger(item, type_str):
+    """
+    code used to extract data from Bing's wrap star
+    :param item: wrap star obj
+    :param type_str: target type string
+    :return: list of all matched target, arranged in occurance
+    """
+    ret = []
+    if type(item) == dict:
+        if 'Type' in item and item['Type'] == type_str:  # 'Business.Consumer_Product.Description'
+            if len(item['Value']) > 1:
+                print 'length error!!!!!!!!!!!'
+            return item['Value']
+        else:
+            for k in item:
+                sub_ret = json_digger(item[k], type_str)
+                if sub_ret:
+                    ret.extend(sub_ret)
+    elif type(item) == list:
+        for i in item:
+            sub_ret = json_digger(i, type_str)
+            if sub_ret:
+                ret.extend(sub_ret)
+    return ret
