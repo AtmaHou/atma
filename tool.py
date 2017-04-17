@@ -3,6 +3,10 @@ import string
 def num_there(s):
     return any(i.isdigit() for i in s)
 
+	
+def keep_bound(value, bound):
+    return min(max(value, bound[0]), bound[1])
+
 
 def convert_to_word_lst(sentence, lower=True):
     sentence = filter(lambda x: x in string.printable, sentence)
