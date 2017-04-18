@@ -46,9 +46,10 @@ def wrap_star_digger(item, type_str, data_name='Value'):
     """
     ret = []
     if type(item) == dict:
-        if 'Type' in item and item['Type'] == type_str:  # 'Business.Consumer_Product.Description'
+        if 'Type' in item and item['Type'] == type_str and data_name in item:  # 'Business.Consumer_Product.Description'
             if len(item[data_name]) > 1:
-                print 'length error!!!!!!!!!!!'
+                # print 'length error!!!!!!!!!!!'
+                pass
             return item[data_name]
         else:
             for k in item:
