@@ -19,3 +19,10 @@ such as convert sentence to word list, judge number, remove punctuation...
 A proxy class & proxy check tool written by me & jinpeng.
 I rewrite Jinpeng's code to enable the proxy to crawl ssl-website.
 This proxy is proved to be stable.
+
+
+./AcoraMatcher.py
+A multi-keyword match tool base on the package acora.
+It use index method to speed up the process. 
+When you need to match a lot of pre-defined keyword in a long text, it 
+will be a great help.
