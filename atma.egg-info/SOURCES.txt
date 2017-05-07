@@ -1,0 +1,5 @@
+setup.py
+atma.egg-info/PKG-INFO
+atma.egg-info/SOURCES.txt
+atma.egg-info/dependency_links.txt
+atma.egg-info/top_level.txt

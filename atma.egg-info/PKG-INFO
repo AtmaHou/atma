@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: atma
+Version: 0.4.0
+Summary: Commonly-used & tested NLP tools, include bleu, tokenizer and so on
+Home-page: https://github.com/AtmaHou/atma
+Author: AtmaHou
+Author-email: ythou@ir.hit.edu.cn.com
+License: MIT License
+Description: UNKNOWN
+Keywords: NLP,Tool,bleu,Tokenizer,Crawler,Proxy
+Platform: any
