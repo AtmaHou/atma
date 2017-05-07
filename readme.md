@@ -1,6 +1,5 @@
 # Light NLP Tool: atma-0.4.1
-### Author: Atma (Yutai Hou)
-### Modified: 5/7/2017 8:29 PM
+Author: Atma (Yutai Hou) | Modified: 5/7/2017 8:29 PM
 
 ## Introduction
 Commonly used NLP tools, which are verified and fast.  
