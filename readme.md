@@ -10,6 +10,19 @@ bleu score, proxy crawler, tokenizer, massive keyword matcher and so on.
 ## Install
 pip install atma
 
+## Quick Start
+Calculate BLEU for a single sentence, comment by atma
+    The result of this code is same as the most popular perl script
+    eg:
+        from atma.bleu import *
+        weight = [0.25, 0.25, 0.25, 0.25]
+        can = 'It is a guide to action which ensures that the military always obeys the commands of the party'.lower().split()
+        ref1 = 'It is a guide to action that ensures that the military will forever heed Party commands'.lower().split()
+        ref2 = 'It is the guiding principle which guarantees the military forces always being under the command of the Party'.lower().split()
+        ref = [ref1, ref2]
+        print bleu(can, ref, weight)
+
+
 
 ## Content & Description
 - ./bleu.py  
