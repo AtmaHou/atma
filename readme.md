@@ -11,7 +11,8 @@ bleu score, proxy crawler, tokenizer, massive keyword matcher and so on.
 pip install atma
 
 ## Quick Start
-- Calculate BLEU for a single sentence  
+- Calculate BLEU  
+    Notice: This is bleu for a single sentence not corpus.
     The result of this code is same as the most popular perl script  
     eg:  
         from atma.bleu import *  
