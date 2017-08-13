@@ -1,4 +1,4 @@
-# Light NLP Tool: atma-0.4.1
+# Light NLP Tool: atma-0.4.2
 Author: Atma (Yutai Hou) | Modified: 5/7/2017 8:29 PM
 
 ## Introduction
@@ -46,3 +46,10 @@ A multi-keyword match tool base on the package acora.
 It use index method to speed up the process.  
 When you need to match a lot of pre-defined keyword in a long text, it  
 will be a great help.
+
+- ./sampler.py
+Silly Code for split and sample data
+
+- ./Metrics.py
+Natty framework for evaluating multi-canditate with multi-candiate.
+It can't be excute directly for now.
